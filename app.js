@@ -24,6 +24,14 @@ function exibeAmigos(){
         listaLi.textContent = listaDeAmigos[i]; // define o texto do li como o nome naquela posição
         lista.appendChild(listaLi); // adiciona <li> ao <ul> 
     }
-    
+}
 
+function sortearAmigo(){
+    let lista = document.getElementById('listaAmigos');
+    lista.innerHTML = "";
+    let numeroAleatorio = Math.floor((Math.random() * listaDeAmigos.length));
+    let nomeEscolhido = listaDeAmigos[numeroAleatorio];
+    let amigoSorteado = document.getElementById('resultado');
+    
+    amigoSorteado.innerHTML = `<li>O amigo secreto sorteado é: ${nomeEscolhido} </li>`;
 }
